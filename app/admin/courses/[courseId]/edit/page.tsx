@@ -23,7 +23,7 @@ export default async function CourseEdit({ params }: { params: Params }) {
         <span className="text-primary underline">{data.title}</span>
       </h1>
 
-      <Tabs defaultValue="">
+      <Tabs defaultValue="basic-info">
         <TabsList className="grid grid-cols-2 w-full">
           <TabsTrigger value="basic-info">Basic Info</TabsTrigger>
           <TabsTrigger value="course-structure">Course Structure</TabsTrigger>
