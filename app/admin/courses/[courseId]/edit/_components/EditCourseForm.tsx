@@ -169,7 +169,11 @@ export const EditCourseForm = ({ data }: Props) => {
           render={({ field, fieldState }) => (
             <Field data-invalid={fieldState.invalid}>
               <FieldLabel htmlFor={field.name}>Thumbnail image</FieldLabel>
-              <Uploader onChange={field.onChange} value={field.value} />
+              <Uploader
+                onChange={field.onChange}
+                value={field.value}
+                fileTypeAccepted="image"
+              />
               {fieldState.invalid && <FieldError errors={[fieldState.error]} />}
             </Field>
           )}

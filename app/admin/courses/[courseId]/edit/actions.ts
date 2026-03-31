@@ -256,7 +256,7 @@ export async function createLesson(
           position: (maxPos?.position ?? 0) + 1,
           description: result.data.description ?? "",
           thumbnailKey: result.data.thubmnailKey ?? "",
-          videoKey: result.data.videosKey ?? "",
+          videoKey: result.data.videoKey ?? "",
         },
       });
     });

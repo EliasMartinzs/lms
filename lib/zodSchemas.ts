@@ -55,7 +55,7 @@ export const lessonSchema = z.object({
     .string()
     .min(1, { message: "Description must be at least 3 character" })
     .optional(),
-  videosKey: z.string().optional(),
+  videoKey: z.string().optional(),
   thubmnailKey: z.string().optional(),
 });
 

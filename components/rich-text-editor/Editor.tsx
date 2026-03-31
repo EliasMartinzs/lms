@@ -4,36 +4,8 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Menubar } from "./Menubar";
 import TextAlign from "@tiptap/extension-text-align";
-import { ControllerRenderProps } from "react-hook-form";
 
-export function RichTextEditor({
-  field,
-}: {
-  field: ControllerRenderProps<
-    {
-      title: string;
-      description: string;
-      fileKey: string;
-      price: number;
-      duration: number;
-      level: "Begginer" | "Intermediate" | "Advanced";
-      category:
-        | "Development"
-        | "Business"
-        | "Finance"
-        | "It & Software"
-        | "Design"
-        | "Marketing"
-        | "Health & Fitness"
-        | "Music"
-        | "Teaching & Academics";
-      smallDescription: string;
-      slug: string;
-      status: "Draft" | "Published" | "Archived";
-    },
-    "description"
-  >;
-}) {
+export function RichTextEditor({ field }: { field: any }) {
   const editor = useEditor({
     extensions: [
       StarterKit,
