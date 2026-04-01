@@ -37,7 +37,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-x-2">
             {navigationItems.map((item) => (
               <Link
-                href={item.name}
+                href={item.href}
                 key={item.href}
                 className="text-xs font-medium transition-colors hover:text-primary"
               >
