@@ -1,9 +1,11 @@
 import { getAllCourses } from "@/app/data/course/get-all-courses";
+import { Suspense } from "react";
 import {
   PublicCourseCard,
   PublicCourseCardSkeleton,
 } from "../_components/PublicCourseCard";
-import { Suspense } from "react";
+
+export const dynamic = "force-dynamic";
 
 export default function PublicCourseRoute() {
   return (
