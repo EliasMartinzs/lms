@@ -8,8 +8,10 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 import { CirclePlusIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function NavMain({
   items,
@@ -20,30 +22,33 @@ export function NavMain({
     icon?: React.ReactNode;
   }[];
 }) {
+  const pathname = usePathname();
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">
         <SidebarMenu>
-          <SidebarMenuItem className="flex items-center gap-2">
-            <SidebarMenuButton
-              asChild
-              tooltip="Quick Create"
-              className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
-            >
-              <Link href={"/admin/courses/create"}>
-                <CirclePlusIcon />
-                <span>Quick Create</span>
-              </Link>
-            </SidebarMenuButton>
-            <Button
-              size="icon"
-              className="size-8 group-data-[collapsible=icon]:opacity-0"
-              variant="outline"
-            >
-              <MailIcon />
-              <span className="sr-only">Inbox</span>
-            </Button>
-          </SidebarMenuItem>
+          {pathname.startsWith("/admin") && (
+            <SidebarMenuItem className="flex items-center gap-2">
+              <SidebarMenuButton
+                asChild
+                tooltip="Quick Create"
+                className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
+              >
+                <Link href={"/admin/courses/create"}>
+                  <CirclePlusIcon />
+                  <span>Quick Create</span>
+                </Link>
+              </SidebarMenuButton>
+              <Button
+                size="icon"
+                className="size-8 group-data-[collapsible=icon]:opacity-0"
+                variant="outline"
+              >
+                <MailIcon />
+                <span className="sr-only">Inbox</span>
+              </Button>
+            </SidebarMenuItem>
+          )}
         </SidebarMenu>
         <SidebarMenu className="gap-1">
           {items.map((item) => (
@@ -53,7 +58,12 @@ export function NavMain({
                 tooltip={item.title}
                 asChild
               >
-                <Link href={item.url}>
+                <Link
+                  href={item.url}
+                  className={cn(
+                    pathname === item.url && "bg-accent-foreground",
+                  )}
+                >
                   {item.icon}
                   <span>{item.title}</span>
                 </Link>
