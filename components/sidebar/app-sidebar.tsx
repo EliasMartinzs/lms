@@ -15,22 +15,17 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import {
-  LayoutDashboardIcon,
-  ListIcon,
-  ChartBarIcon,
-  FolderIcon,
-  UsersIcon,
-  CameraIcon,
-  FileTextIcon,
-  Settings2Icon,
-  CircleHelpIcon,
-  SearchIcon,
-  DatabaseIcon,
-  FileChartColumnIcon,
-  FileIcon,
-  CommandIcon,
-  Diamond,
   BookOpen,
+  CameraIcon,
+  ChartBarIcon,
+  CircleHelpIcon,
+  Diamond,
+  FileTextIcon,
+  FolderIcon,
+  LayoutDashboardIcon,
+  SearchIcon,
+  Settings2Icon,
+  UsersIcon,
 } from "lucide-react";
 import Link from "next/link";
 

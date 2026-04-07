@@ -27,17 +27,7 @@ interface Props {
 }
 
 export const AdminCourseCard = ({
-  data: {
-    duration,
-    fileKey,
-    id,
-    level,
-    price,
-    slug,
-    smallDescription,
-    status,
-    title,
-  },
+  data: { duration, fileKey, id, level, slug, smallDescription, title },
 }: Props) => {
   const thumbnailUrl = useConstructUrl(fileKey);
 

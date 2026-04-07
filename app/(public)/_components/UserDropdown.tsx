@@ -1,3 +1,4 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,11 +7,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
+import { useSignOut } from "@/hooks/use-signout";
 import { BookOpen, Home, Layout, LogOut } from "lucide-react";
 import Link from "next/link";
-import { useSignOut } from "@/hooks/use-signout";
 
 interface Props {
   name: string;
@@ -18,7 +18,7 @@ interface Props {
   avatar: string;
 }
 
-export const UserDropdown = ({ avatar, email, name }: Props) => {
+export const UserDropdown = ({ avatar, name }: Props) => {
   const handleSignOut = useSignOut();
 
   return (

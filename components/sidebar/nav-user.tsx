@@ -20,12 +20,9 @@ import { useSignOut } from "@/hooks/use-signout";
 import { authClient } from "@/lib/auth-client";
 import {
   EllipsisVerticalIcon,
-  CircleUserRoundIcon,
-  CreditCardIcon,
-  BellIcon,
-  LogOutIcon,
   HomeIcon,
   LayoutDashboard,
+  LogOutIcon,
   Tv2,
 } from "lucide-react";
 import Link from "next/link";

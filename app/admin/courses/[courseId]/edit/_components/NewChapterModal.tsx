@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -21,8 +20,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus } from "lucide-react";
 import { useState, useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { createChapter } from "../actions";
 import { toast } from "sonner";
+import { createChapter } from "../actions";
 
 export const NewChapterModal = ({ courseId }: { courseId: string }) => {
   const [isOpen, setIsOpen] = useState(false);

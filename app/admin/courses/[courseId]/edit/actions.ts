@@ -12,7 +12,7 @@ import {
   lessonSchema,
   LessonSchemaType,
 } from "@/lib/zodSchemas";
-import { detectBot, fixedWindow, request } from "@arcjet/next";
+import { fixedWindow, request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
 
 const aj = arcjet.withRule(
@@ -208,7 +208,7 @@ export async function createChapter(
       status: "sucess",
       message: "Create successfully",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Failed to create chapter",

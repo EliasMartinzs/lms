@@ -3,7 +3,6 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -16,18 +15,13 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { tryCatch } from "@/hooks/try-catch";
-import {
-  chapterSchema,
-  ChapterSchemaType,
-  lessonSchema,
-  LessonSchemaType,
-} from "@/lib/zodSchemas";
+import { lessonSchema, LessonSchemaType } from "@/lib/zodSchemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus } from "lucide-react";
 import { useState, useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { createChapter, createLesson } from "../actions";
 import { toast } from "sonner";
+import { createLesson } from "../actions";
 
 export const NewLessonModal = ({
   courseId,

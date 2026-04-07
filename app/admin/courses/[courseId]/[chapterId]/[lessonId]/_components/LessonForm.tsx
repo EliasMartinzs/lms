@@ -25,8 +25,8 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useTransition } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { updateLesson } from "../actions";
 import { toast } from "sonner";
+import { updateLesson } from "../actions";
 
 interface Props {
   data: AdminLessonType;
@@ -158,7 +158,7 @@ export const LessonForm = ({ chapterId, data, courseId }: Props) => {
                 )}
               />
 
-              <Button type="submit" className="self-start">
+              <Button type="submit" className="self-start" disabled={isPending}>
                 Save Lesson
               </Button>
             </FieldGroup>

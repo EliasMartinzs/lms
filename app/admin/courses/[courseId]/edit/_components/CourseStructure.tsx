@@ -1,5 +1,13 @@
 "use client";
+import { AdminCourseType } from "@/app/data/admin/admin-get-course";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { cn } from "@/lib/utils";
 import {
   DndContext,
   DragEndEvent,
@@ -17,31 +25,21 @@ import {
   useSortable,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-import { ReactNode, useEffect, useState } from "react";
 import { CSS } from "@dnd-kit/utilities";
-import { AdminCourseType } from "@/app/data/admin/admin-get-course";
-import { cn } from "@/lib/utils";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import {
   ChevronDown,
   ChevronRight,
-  ChevronUp,
   FileText,
   GripVertical,
-  Trash2,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ReactNode, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { reorderChapter, reorderLesson } from "../actions";
+import { DeleteChapter } from "./DeleteChapter";
+import { DeleteLesson } from "./DeleteLesson";
 import { NewChapterModal } from "./NewChapterModal";
 import { NewLessonModal } from "./NewLessonModal";
-import { DeleteLesson } from "./DeleteLesson";
-import { DeleteChapter } from "./DeleteChapter";
 
 interface Props {
   data: AdminCourseType;
