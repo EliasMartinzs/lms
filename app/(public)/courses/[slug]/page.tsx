@@ -269,7 +269,7 @@ export default async function SlugPage({ params }: { params: Params }) {
               </div>
 
               {isEnrolled ? (
-                <Link href={"/dahsboard"}>Watch course</Link>
+                <Link href={"/dashboard"}>Watch course</Link>
               ) : (
                 <EnrollmentButton courseId={course.id} />
               )}
