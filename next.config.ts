@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "elias-lms.fly.storage.tigris.dev",
       },
+      {
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

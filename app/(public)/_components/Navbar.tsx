@@ -5,6 +5,8 @@ import { ModeToggle } from "@/components/ui/theme-toggle";
 import { authClient } from "@/lib/auth-client";
 import { Diamond } from "lucide-react";
 import Link from "next/link";
+import { MenuMobile } from "./MenuMobile";
+import { SearchMobile } from "./SearchMobile";
 import { UserDropdown } from "./UserDropdown";
 
 const navigationItems = [
@@ -27,7 +29,7 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-[backdrop-filter]:bg-background/60">
-      <div className="container flex min-h-16 items-center mx-auto px-4 md:px-6 lg:px-8">
+      <div className="container flex min-h-16 items-center mx-auto px-4 md:px-6 lg:px-8 max-lg:hidden">
         <Link href={"/"} className="flex items-center space-x-2 mr-4">
           <Diamond className="size-6" />
           <span>LMS</span>
@@ -70,6 +72,21 @@ export const Navbar = () => {
             )}
           </div>
         </nav>
+      </div>
+
+      <div className="container min-h-16 px-4 flex items-center justify-between lg:hidden">
+        <MenuMobile
+          items={navigationItems}
+          user={{ name: session?.user.name, image: session?.user.image }}
+          isPending={isPending}
+        />
+
+        <Link href={"/"} className="flex items-center space-x-2 mr-4">
+          <Diamond className="size-6" />
+          <span>LMS</span>
+        </Link>
+
+        <SearchMobile />
       </div>
     </header>
   );
