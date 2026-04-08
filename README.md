@@ -1,4 +1,4 @@
-# EducaFlow — Sistema de Gestão de Aprendizagem
+# LMS — Sistema de Gestão de Aprendizagem
 
 <div align="center">
 
@@ -15,7 +15,7 @@
 
 ## Sobre o Projeto
 
-O **EducaFlow** é uma plataforma completa de cursos online que permite a qualquer pessoa criar, publicar e vender cursos digitais. O projeto foi desenvolvido do zero com foco em performance, segurança e uma experiência de usuário moderna e fluida.
+O **LMS** é uma plataforma completa de cursos online que permite a qualquer pessoa criar, publicar e vender cursos digitais. O projeto foi desenvolvido do zero com foco em performance, e uma experiência de usuário moderna.
 
 Na plataforma, **administradores** podem criar cursos organizados em capítulos e aulas, com suporte a editor de texto rico, upload de vídeos e thumbnails. Já os **alunos** têm acesso a um catálogo público, podem comprar cursos via Stripe, assistir às aulas e acompanhar seu progresso individual.
 
