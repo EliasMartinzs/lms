@@ -24,12 +24,18 @@ model User {
 
   stripeCustomerId String? @unique
 
-  role       String?
+  role       Role @default(admin)
+
   banned     Boolean?  @default(false)
   banReason  String?
   banExpires DateTime?
 
   @@map("user")
+}
+
+enum Role {
+  admin
+  user
 }
 
 model Session {

@@ -30,51 +30,6 @@ import {
 import { getAllCourses } from "../data/course/get-all-courses";
 import { PublicCourseCard } from "./_components/PublicCourseCard";
 
-// const courses = [
-//   {
-//     id: 1,
-//     title: "React & Next.js: Do Zero ao Deploy",
-//     instructor: "Elias Developer",
-//     rating: 4.9,
-//     students: 12847,
-//     price: 89.9,
-//     originalPrice: 399.9,
-//     badge: "Best Seller",
-//     thumbnail:
-//       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=340&fit=crop",
-//     duration: "48h",
-//     lessons: 156,
-//   },
-//   {
-//     id: 2,
-//     title: "UI/UX Design: Da Ideia ao Protótipo",
-//     instructor: "Ana Designer",
-//     rating: 4.8,
-//     students: 8234,
-//     price: 79.9,
-//     originalPrice: 349.9,
-//     badge: "New",
-//     thumbnail:
-//       "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=340&fit=crop",
-//     duration: "32h",
-//     lessons: 98,
-//   },
-//   {
-//     id: 3,
-//     title: "TypeScript Avançado: Patterns & Arch",
-//     instructor: "Carlos Tech",
-//     rating: 4.9,
-//     students: 5632,
-//     price: 99.9,
-//     originalPrice: 449.9,
-//     badge: "Advanced",
-//     thumbnail:
-//       "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=340&fit=crop",
-//     duration: "40h",
-//     lessons: 124,
-//   },
-// ];
-
 const testimonials = [
   {
     name: "Marina Silva",

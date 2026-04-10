@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { GithubIcon, Loader2 } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
-import { toast } from "sonner";
+import { GithubIcon, Loader2 } from "lucide-react";
 import { useTransition } from "react";
+import { toast } from "sonner";
 
 export const LoginForm = () => {
   const [githubPending, startGithubTransition] = useTransition();
@@ -23,8 +23,11 @@ export const LoginForm = () => {
       await authClient.signIn.social({
         provider: "github",
         callbackURL: "/",
+        additionalData: {
+          role: "admin",
+        },
         fetchOptions: {
-          onSuccess: () => {
+          onSuccess: async () => {
             toast.success("Signed in with Github, you will be redirected...");
           },
           onError: (error) => {
@@ -34,6 +37,7 @@ export const LoginForm = () => {
       });
     });
   }
+
   return (
     <Card>
       <CardHeader>
